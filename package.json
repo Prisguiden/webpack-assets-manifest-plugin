@@ -1,0 +1,24 @@
+{
+  "name": "@prisguiden/webpack-assets-manifest-plugin",
+  "version": "1.0.0",
+  "description": "Generates a assets-manifest.json containing the entries and generated files from the webpack config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prisguiden/webpack-assets-manifest-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "assets",
+    "manifest"
+  ],
+  "author": "Simen Graaten <simen@prisguiden.no>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Prisguiden/webpack-assets-manifest-plugin/issues"
+  },
+  "homepage": "https://github.com/Prisguiden/webpack-assets-manifest-plugin#readme"
+}
