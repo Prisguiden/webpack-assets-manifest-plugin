@@ -3,7 +3,7 @@ const path = require("path");
 
 class WebpackAssetsManifestPlugin {
   constructor(options) {
-    this.options = options;
+    this.options = options || {};
     if (!this.options.filename) {
       this.options.filename = "assets-manifest.json";
     }
