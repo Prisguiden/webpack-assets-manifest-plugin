@@ -1,6 +1,6 @@
 {
   "name": "@prisguiden/webpack-assets-manifest-plugin",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Generates a assets-manifest.json containing the entries and generated files from the webpack config",
   "main": "index.js",
   "scripts": {
