@@ -9,14 +9,15 @@ class WebpackAssetsManifestPlugin {
     }
   }
   apply(compiler) {
-    compiler.hooks.done.tap("Manifest Plugin", stats => {
+    compiler.hooks.done.tap("Manifest Plugin", (stats) => {
       let chunkGroups = stats.toJson().namedChunkGroups;
       let chunks = stats.toJson().chunks;
       let webRoot = stats.compilation.outputOptions.path;
+      let publicPath = stats.compilation.outputOptions.publicPath;
       let manifest = {
         js: {},
         css: {},
-        map: {}
+        map: {},
       };
 
       for (let chunkGroupName in chunkGroups) {
@@ -39,7 +40,9 @@ class WebpackAssetsManifestPlugin {
               manifest[fileType][chunkGroupName] = [];
             }
 
-            manifest[fileType][chunkGroupName].push("/" + file);
+            manifest[fileType][chunkGroupName].push(
+              path.join(publicPath, file)
+            );
           }
         }
       }
